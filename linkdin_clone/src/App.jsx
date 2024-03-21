@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import './App.css'
-
+import Login from './componants/Login'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <h1 className='bg-slate-500'>hello world</h1>
+    <BrowserRouter>
+     <Routes>
+     <Route path='/' element = {<Login/>}/>
+     </Routes>
+    </BrowserRouter>
     </>
   )
 }
